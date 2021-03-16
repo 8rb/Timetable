@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# My Timetable
+<a href="https://my-timetable.netlify.app/" target="_blank"><img  style="display:inline-block"  alt="Logo" height="100px" src="https://raw.githubusercontent.com/8rb/Timetable/main/public/timetable_icon.png?raw=true" /></a>
+  
+This repo is a _*made-from-scratch*_ timetable using basic table tags for structuring and styled-components for styling. The language chosen was TypeScript for learning purposes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In case you want to create your Timetable using this repo, proceed as follows:
 
-## Available Scripts
+1. Clone the repo into your machine
 
-In the project directory, you can run:
+2. Start the app by running the command `yarn start`
 
-### `yarn start`
+3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. To replace the courses go to the file `events.ts` located inside the `src` folder.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+5. Create the Courses you are taking as classes to avoid writing repetitive code (DRY).
 
-### `yarn test`
+6. Inside the `TimeTableData` array, place the courses in their respective time and day, ****time**** being the object of the `TimeTableData`'s array and ****day**** being an attribute of the time object.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. Save the changes and view them in the browser.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+8. For deployment you can use [Render](https://render.com/) or [Netlify](https://www.netlify.com/) for continuous deployment.
