@@ -14,15 +14,15 @@ const Timetable = () => {
     }
 
     const renderData = () => {
-        return data.map(({time, monday, tuesday, wednesday, thursday, friday, saturday}, index) => {
+        return data.map(({time, monday, tuesday, wednesday, friday, saturday}, index) => {
             return <tr key={index}>
                 <TDTime key={index}>{time}</TDTime>
-                <TD color={monday?.color}>{monday?.name}</TD>
-                <TD color={tuesday?.color}>{tuesday?.name}</TD>
-                <TD color={wednesday?.color}>{wednesday?.name}</TD>
-                <TD color={thursday?.color}>{thursday?.name}</TD>
-                <TD color={friday?.color}>{friday?.name}</TD>
-                <TD color={saturday?.color}>{saturday?.name}</TD>
+                <TD color={monday?.class.color} type={monday?.type}>{monday?.class.name}</TD>
+                <TD color={tuesday?.class.color} type={tuesday?.type}>{tuesday?.class.name}</TD>
+                <TD color={wednesday?.class.color} type={wednesday?.type}>{wednesday?.class.name}</TD>
+                <TD></TD>
+                <TD color={friday?.class.color} type={friday?.type}>{friday?.class.name}</TD>
+                <TD color={saturday?.class.color} type={saturday?.type}>{saturday?.class.name}</TD>
             </tr>
         })
     }

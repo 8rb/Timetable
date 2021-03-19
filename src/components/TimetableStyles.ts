@@ -11,7 +11,7 @@ export const Table = styled.table`
   border-radius: 10px;
   height: 80%;
   width: 100%;
-  border-spacing: 0;
+  border-spacing: .5vw 0;
 `;
 
 export const TH = styled.th`
@@ -23,16 +23,32 @@ export const TH = styled.th`
 
 type BGColor = {
   color?: string; ///Passing Optional Props
+  type?: string;
 };
 
 export const TD = styled.td<BGColor>`
+  box-sizing: border-box;
   color: #252525;
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
-  border: none;
   padding: .7rem;
+  margin: 1rem;
   background: ${({color}) => color};
+
+  ${props => props.type === 'first'
+    &&`
+        // border-radius: 10px 10px 0 0;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+  `};
+
+  ${props => props.type === 'last'
+    &&`
+        border-radius: 0 0 10px 10px;
+  `};
+
+
 `
 
 export const TDTime = styled.td<BGColor>`
