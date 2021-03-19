@@ -51,7 +51,6 @@ const TimeTableData = [
     {
         "time": "7am",
         "monday": {class: Mobile, type: "first"},
-        "thursday": {},
     },
     {
         "time": "8am",
