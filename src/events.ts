@@ -82,17 +82,17 @@ const TimeTableData = [
         "time": "1pm",
     },
     {
-        "time": "2pm",
-    },
-    {
-        "time": "5pm",
+        "time": "3pm",
         "tuesday": {class: French, type: "first"},
         "wednesday": {class: French, type: "first"}
     },
     {
-        "time": "6pm",
+        "time": "4pm",
         "tuesday": {class: French, type: "last"},
         "wednesday": {class: French, type: "last"},
+    },
+    {
+        "time": "5pm",
     },
     {
         "time": "7pm",
