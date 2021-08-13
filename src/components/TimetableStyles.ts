@@ -7,15 +7,15 @@ export const TableContainer = styled.div`
 `
 
 export const Table = styled.table`
-  border: 1px solid #fff;
-  border-radius: 10px;
+  border: 1px solid #E0FBFC;
+  border-radius: 1px;
   height: 80%;
   width: 100%;
   border-spacing: .5vw 0;
 `;
 
 export const TH = styled.th`
-  color: #fff;
+  color: #E0FBFC;
   font-size: 1.2rem;
   padding: 1.2rem;
   text-align: center;
@@ -32,20 +32,17 @@ export const TD = styled.td<ClassProps>`
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
-  padding: .7rem;
+  padding: .9rem .7rem;
   margin: 1rem;
   background: ${({color}) => color};
 
   ${props => props.type === 'first'
     &&`
-        // border-radius: 10px 10px 0 0;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
   `};
 
   ${props => props.type === 'last'
     &&`
-        border-radius: 0 0 10px 10px;
+      border-bottom: 7px solid #293241;
   `};
 
   ${props => props.type
@@ -59,7 +56,7 @@ export const TD = styled.td<ClassProps>`
 `
 
 export const TDTime = styled.td`
-  color: #ffffff;
+  color: #E0FBFC;
   font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
@@ -80,7 +77,7 @@ export const Modal = styled.div<ClassProps>`
   width: 30%;
   min-width: 310px;
   background: goldenrod;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 3px solid #282c34;
   background: ${({color}) => color};
   display: flex;
