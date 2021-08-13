@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { TableContainer, Table, TH, TD, TDTime, Modal, ModalSubTitleRow, ModalTitle, ModalSubTitle, ModalText } from './TimetableStyles';
-import TimeTableData from '../events';
+import TimeTableData from '../events/events';
 
 type Class = {
     name: string,
@@ -17,7 +17,6 @@ const Timetable = () => {
     const [data] = useState(TimeTableData);
     const [showModal, setShowModal] = useState(false);
     const [actualClass, setActualClass] = useState<Class>();
-
 
     const renderModal = () => {
         return actualClass && 
@@ -52,7 +51,9 @@ const Timetable = () => {
             return <TD onClick={() => {toggleModal(actualClass)}} color={actualClass?.color} type={type}>{actualClass?.name}</TD>
         }
         else if(type === "last") {
-            return <TD onClick={() => {toggleModal(actualClass)}} color={actualClass?.color} type={type}>{actualClass?.class}</TD>
+            return (
+                <TD onClick={() => {toggleModal(actualClass)}} color={actualClass?.color} type={type}>{actualClass?.class}</TD>
+            )
         }
         else if(type === "middle") {
             return <TD onClick={() => {toggleModal(actualClass)}} color={actualClass?.color} type={type}>{'-'}</TD>
@@ -63,13 +64,13 @@ const Timetable = () => {
     }
 
     const renderData = () => {
-        return data.map(({time, monday, tuesday, wednesday, friday, saturday}, index) => {
+        return data.map(({time, monday, tuesday, wednesday, thursday, friday, saturday}, index) => {
             return <tr key={index}>
                 <TDTime key={index}>{time}</TDTime>
                 {renderDataCell(monday?.class, monday?.type)}
                 {renderDataCell(tuesday?.class, tuesday?.type)}
-                {renderDataCell(wednesday?.class, wednesday?.type)}
-                {renderDataCell(undefined, undefined)} {/* Thursday */} 
+                {renderDataCell(wednesday?.class, wednesday?.type)} {/* Wednesday */}
+                {renderDataCell(thursday?.class, thursday?.type)}
                 {renderDataCell(friday?.class, friday?.type)}
                 {renderDataCell(saturday?.class, saturday?.type)}
             </tr>
