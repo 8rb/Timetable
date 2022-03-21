@@ -17,7 +17,7 @@ export const Table = styled.table`
 export const TH = styled.th`
   color: #E0FBFC;
   font-size: 1.2rem;
-  padding: 1.2rem;
+  padding: 1rem;
   text-align: center;
 `
 
@@ -34,19 +34,19 @@ export const TD = styled.td<ClassProps>`
   text-align: center;
   padding: .9rem .7rem;
   margin: 1rem;
-  background: ${({color}) => color};
+  background: ${({ color }) => color};
 
   ${props => props.type === 'first'
-    &&`
+    && `
   `};
 
   ${props => props.type === 'last'
-    &&`
+    && `
       border-bottom: 7px solid #293241;
   `};
 
   ${props => props.type
-    &&`
+    && `
     transition: all .2s ease-in-out;
     &:hover {
       filter: brightness(95%);
@@ -64,12 +64,6 @@ export const TDTime = styled.td`
   padding: .7rem;
 `
 
-export const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
-
 export const Modal = styled.div<ClassProps>`
   position: absolute;
   height: 30%;
@@ -79,7 +73,7 @@ export const Modal = styled.div<ClassProps>`
   background: goldenrod;
   border-radius: 5px;
   border: 3px solid #282c34;
-  background: ${({color}) => color};
+  background: ${({ color }) => color};
   display: flex;
   align-items: center;
   flex-direction: column;
