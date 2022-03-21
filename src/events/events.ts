@@ -23,82 +23,85 @@ type Times = {
     time?: string,
 }
 
-const Seminar: Class = {
-    name: "Research Seminar 2",
+const Portuguese: Class = {
+    name: "Portuguese 1",
     color: "#CCFCCB",
-    code: "IN397",
-    class: "IS8D",
+    code: "TR189",
+    class: "TR89",
     professor: "Luis Alberto Vives Garnique"
 };
 
-const TDP: Class = {
-    name: "TDP",
+const Evaluation: Class = {
+    name: "Evaluation and New Trends",
     color: "#A882DD",
-    code: "SI639",
-    class: "SV81",
+    code: "SI678",
+    class: "SI93",
     professor: "Ernesto Ocampo Tello"
 };
 
-const Management: Class = {
-    name: "Project Management",
+const Entrepreneurship: Class = {
+    name: "Entrepreneurship",
     color: "#A5D8FF",
-    code: " SI647",
-    class: "WV82",
-    professor: "Sandra Analia Wong Durand"
+    code: "AD204",
+    class: "AF95",
+    professor: "RAMIREZ BOHADA, JUAN CARLOS"
 };
 
-const French: Class = {
-    name: "French 2",
+const TP: Class = {
+    name: "TP1",
     color: "#F5A38F",
-    code: "TR240",
-    class: "FS6A",
-    professor: "Paolo Rodrigo Nery Lozada"
+    code: "SI644",
+    class: "SS91",
+    professor: " REQUEJO CHANAME, WALTER JUAN"
 };
 
 const TimeTableData: Times[] = [
     {
-        "time": "1pm"
+        "time": "8am",
     },
     {
-        "time": "2pm"
+        "time": "9am",
+        "monday": { class: TP, type: "first" },
+        "wednesday": { class: Evaluation, type: "first" },
+        "friday": { class: Evaluation, type: "first" }
+    },
+    {
+        "time": "10am",
+        "monday": { class: TP, type: "last" },
+        "wednesday": { class: Evaluation, type: "last" },
+        "friday": { class: Evaluation, type: "last" }
+    },
+    {
+        "time": "11am",
+        "monday": { class: Entrepreneurship, type: "first" },
+    },
+    {
+        "time": "12am",
+        "monday": { class: Entrepreneurship, type: "last" },
     },
     {
         "time": "3pm",
-        "monday": {class: French, type: "first"},
-        "thursday": {class: French, type: "first"}
+        "wednesday": { class: Portuguese, type: "first" },
     },
     {
         "time": "4pm",
-        "monday": {class: French, type: "last"},
-        "tuesday": {class: TDP, type: "first"},
-        "thursday": {class: French, type: "last"},
-        "friday": {class: Seminar, type: "first"},
-        "saturday": {class: TDP, type: "first"},
+        "monday": { class: TP, type: "first" },
+        "wednesday": { class: Portuguese, type: "last" },
+        "thursday": { class: Portuguese, type: "first" },
+        "friday": { class: TP, type: "first" },
     },
     {
         "time": "5pm",
-        "tuesday": {class: TDP, type: "middle"},
-        "friday": {class: Seminar, type: "middle"},
-        "saturday": {class: TDP, type: "middle"},
+        "monday": { class: TP, type: "middle" },
+        "friday": { class: TP, type: "middle" },
     },
     {
         "time": "6pm",
-        "tuesday": {class: TDP, type: "last"},
-        "friday": {class: Seminar, type: "last"},
-        "saturday": {class: TDP, type: "last"},
+        "monday": { class: TP, type: "last" },
+        "friday": { class: TP, type: "last" },
     },
     {
         "time": "7pm",
-        "thursday": {class: Management, type: "first"},
-        "saturday": {class: Management, type: "first"},
-    },
-    {
-        "time": "8pm",
-        "thursday": {class: Management, type: "last"},
-        "saturday": {class: Management, type: "last"},
-    },
-    {
-        "time": "9pm"
     },
 ]
 export default TimeTableData;
