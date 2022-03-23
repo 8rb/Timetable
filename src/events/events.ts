@@ -26,9 +26,9 @@ type Times = {
 const Portuguese: Class = {
     name: "Portuguese 1",
     color: "#CCFCCB",
-    code: "TR189",
-    class: "TR89",
-    professor: "Luis Alberto Vives Garnique"
+    code: "TR189 TR89",
+    class: "UB-44",
+    professor: "Sara Eleodora Candela Cuzcano"
 };
 
 const Evaluation: Class = {
@@ -44,7 +44,7 @@ const Entrepreneurship: Class = {
     color: "#A5D8FF",
     code: "AD204",
     class: "AF95",
-    professor: "RAMIREZ BOHADA, JUAN CARLOS"
+    professor: "Juan Carlos Ramirez Bohada"
 };
 
 const TP: Class = {
@@ -52,7 +52,7 @@ const TP: Class = {
     color: "#F5A38F",
     code: "SI644",
     class: "SS91",
-    professor: " REQUEJO CHANAME, WALTER JUAN"
+    professor: "Walter Juan Requejo Chaname"
 };
 
 const TimeTableData: Times[] = [
