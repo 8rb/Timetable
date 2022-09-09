@@ -7,7 +7,7 @@ export const TableContainer = styled.div`
 `
 
 export const Table = styled.table`
-  border: 1px solid #E0FBFC;
+  border: 1px solid #ffffff;
   border-radius: 1px;
   height: 80%;
   width: 100%;
@@ -15,8 +15,9 @@ export const Table = styled.table`
 `;
 
 export const TH = styled.th`
-  color: #E0FBFC;
+  color: #ffffff;
   font-size: 1.2rem;
+  font-weight: 400;
   padding: 1rem;
   text-align: center;
 `
@@ -29,10 +30,9 @@ type ClassProps = {
 export const TD = styled.td<ClassProps>`
   box-sizing: border-box;
   color: #252525;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   text-align: center;
-  padding: .9rem .7rem;
   margin: 1rem;
   background: ${({ color }) => color};
 
@@ -42,7 +42,7 @@ export const TD = styled.td<ClassProps>`
 
   ${props => props.type === 'last'
     && `
-      border-bottom: 7px solid #293241;
+      border-bottom: 7px solid #151618;
   `};
 
   ${props => props.type
@@ -56,9 +56,10 @@ export const TD = styled.td<ClassProps>`
 `
 
 export const TDTime = styled.td`
-  color: #E0FBFC;
-  font-size: 1.2rem;
-  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 1.1rem;
+  font-weight: 300;
   text-align: center;
   border: none;
   padding: .7rem;
@@ -68,14 +69,14 @@ export const Modal = styled.div<ClassProps>`
   position: absolute;
   height: 30%;
   min-height: 220px;
-  width: 30%;
+  width: 25%;
   min-width: 310px;
   background: goldenrod;
-  border-radius: 5px;
-  border: 3px solid #282c34;
+  border: 1px solid #282c34;
   background: ${({ color }) => color};
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   transition: all .2s ease-in-out;
   &:hover {
@@ -93,9 +94,8 @@ export const ModalSubTitleRow = styled.div`
 `;
 
 export const ModalTitle = styled.h1`
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 400;
   margin: 1rem;
   text-align: center;
 `;
@@ -103,14 +103,13 @@ export const ModalTitle = styled.h1`
 export const ModalSubTitle = styled.h2`
   margin: 0;
   font-size: 1.75rem;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
 `;
 
 export const ModalText = styled.p`
-  margin: 0;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 300;
   margin: 2rem;
   text-align: center;
 `;
