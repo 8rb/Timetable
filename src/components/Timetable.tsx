@@ -30,6 +30,7 @@ const Timetable = () => {
 		'Wednesday',
 		'Thursday',
 		'Friday',
+		'Saturday',
 	])
 	const [data] = useState(TimeTableData)
 	const [showModal, setShowModal] = useState(false)
@@ -132,9 +133,10 @@ const Timetable = () => {
 						<TDTime key={index}>{time}</TDTime>
 						{renderDataCell(monday?.class, monday?.type)}
 						{renderDataCell(tuesday?.class, tuesday?.type)}
-						{renderDataCell(wednesday?.class, wednesday?.type)}{' '}
+						{renderDataCell(wednesday?.class, wednesday?.type)}
 						{renderDataCell(thursday?.class, thursday?.type)}
 						{renderDataCell(friday?.class, friday?.type)}
+						{renderDataCell(saturday?.class, saturday?.type)}
 					</tr>
 				)
 			}

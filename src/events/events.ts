@@ -23,36 +23,36 @@ type Times = {
     time?: string,
 }
 
-const Portuguese: Class = {
-    name: "Portuguese 1",
-    color: "#CCFCCB",
-    code: "TR189 TR89",
-    class: "UB-44",
-    professor: "Sara Eleodora Candela Cuzcano"
+const Chess: Class = {
+    name: "Chess",
+    color: "#F7FFF7",
+    code: "-",
+    class: "-",
+    professor: "Fanny Duarte"
 };
 
-const Evaluation: Class = {
-    name: "Evaluation and New Trends",
-    color: "#A882DD",
-    code: "SI678",
-    class: "SI93",
-    professor: "Ernesto Ocampo Tello"
+const Client: Class = {
+    name: "Product Owner",
+    color: "#6F7D8C",
+    code: "-",
+    class: "-",
+    professor: "Walter Requejo"
 };
 
-const Entrepreneurship: Class = {
-    name: "Entrepreneurship",
-    color: "#A5D8FF",
-    code: "AD204",
-    class: "AF95",
-    professor: "Juan Carlos Ramirez Bohada"
+const Coauthor: Class = {
+    name: "CO-Author",
+    color: "#F4BBD3",
+    code: "-",
+    class: "-",
+    professor: "Daniel Subauste"
 };
 
 const TP: Class = {
-    name: "TP1",
-    color: "#F5A38F",
-    code: "SI644",
-    class: "SS91",
-    professor: "Walter Juan Requejo Chaname"
+    name: "Manager",
+    color: "#ffe66d",
+    code: "-",
+    class: "-",
+    professor: "Milton Chinchay"
 };
 
 const TimeTableData: Times[] = [
@@ -61,47 +61,40 @@ const TimeTableData: Times[] = [
     },
     {
         "time": "9am",
-        "monday": { class: TP, type: "first" },
-        "wednesday": { class: Evaluation, type: "first" },
-        "friday": { class: Evaluation, type: "first" }
     },
     {
         "time": "10am",
-        "monday": { class: TP, type: "last" },
-        "wednesday": { class: Evaluation, type: "last" },
-        "friday": { class: Evaluation, type: "last" }
     },
     {
         "time": "11am",
-        "monday": { class: Entrepreneurship, type: "first" },
     },
     {
         "time": "12am",
-        "monday": { class: Entrepreneurship, type: "last" },
     },
     {
         "time": "3pm",
-        "wednesday": { class: Portuguese, type: "first" },
+        "thursday": { class: Client, type: "first" },
     },
     {
         "time": "4pm",
-        "monday": { class: TP, type: "first" },
-        "wednesday": { class: Portuguese, type: "last" },
-        "thursday": { class: Portuguese, type: "first" },
-        "friday": { class: TP, type: "first" },
+        "tuesday": { class: TP, type: "first" },
+        "thursday": { class: TP, type: "first" },
+        "saturday": { class: Chess, type: "first" },
     },
     {
         "time": "5pm",
-        "monday": { class: TP, type: "middle" },
-        "friday": { class: TP, type: "middle" },
+        "tuesday": { class: TP, type: "middle" },
+        "thursday": { class: TP, type: "middle" },
+        "saturday": { class: Chess, type: "last" },
     },
     {
         "time": "6pm",
-        "monday": { class: TP, type: "last" },
-        "friday": { class: TP, type: "last" },
+        "tuesday": { class: TP, type: "last" },
+        "thursday": { class: TP, type: "last" },
     },
     {
         "time": "7pm",
+        "friday": { class: Coauthor, type: "first" },
     },
 ]
 export default TimeTableData;
