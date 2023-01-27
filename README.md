@@ -19,4 +19,4 @@ In case you want to create your Timetable using this repo, proceed as follows:
 
 7. Save the changes and view them in the browser.
 
-8. For deployment you can use [Render](https://render.com/) or [Netlify](https://www.netlify.com/) for continuous deployment.
+8. For deployment you can use [Netlify](https://www.netlify.com/) for continuous deployment.
